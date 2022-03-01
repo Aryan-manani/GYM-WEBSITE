@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+      body{
+          color:white;
+          margin: 0px;
+          padding: 0px;
+          background: url('weightlifting-3901441_1280.webp');
+          font-family: 'Baloo Bhai 2', cursive;
+      }
+  
+      /* for navigation bar */
+      .navbar{
+          width: 40%;
+          background-color: rgb(76, 114, 116);
+          border-radius: 106px;
+          margin: 5px auto;
+      }
+      .navbar li{
+          float: left;
+          padding : 3px 5px;
+          margin : 7px 30px;
+      }
+      .navbar li a{
+          text-decoration: none;
+          color: white;
+      }
+      .navbar li a:hover{
+          color: rgb(214, 248, 19);
+          font-size: 18px;
+      }
+      .navbar ul{
+          overflow: auto;
+          list-style: none;
+      }
+      .left{
+          display: inline-block;
+          position: absolute;
+          left:60px;
+          top:20px;
+      }
+      .right{
+          display: inline-block;
+          position: absolute;
+          top:20px;
+          right:60px;
+      }
+      .left{
+          display: inline-block;
+          position: absolute;
+          top:20px;
+          left:60px;
+      }
+      .left img{
+          display: inline-block;
+          width: 10%;
+      }
+      h1{
+          font-size: 40px;
+      }
+      a{
+          text-decoration: none;
+          color: white;
+      }
+      
+      /* for "call us " and "Email us"and "Submit" button */
+      .btn {
+          font-family: 'Baloo Bhai 2', cursive;
+          margin: 0px 9px;
+          background-color: rgb(74, 114, 116);
+          color: white;
+          padding: 4px 14px;
+          border: 2px solid cadetblue;
+          border-radius: 10px;
+          font-size: 18px;
+          cursor: pointer;
+      }
+      /* for "call us " and "Email us" and "Submit" button */
+      .btn:hover {
+          background-color: rgb(223, 66, 81);
+          font-size: 20px;
+      }
+  
+      /* for form container */
+      .container {
+          border: 4px solid rgb(238, 96, 226);
+          margin: 106px auto;
+          padding: 75px;
+          width: 35%;
+      }
+  
+      /* For each form attributes */
+      .form-group input {
+          font-family: 'Baloo Bhai 2', cursive;
+          text-align: center;
+          display: block;
+          width: 425px;
+          border: 1.5px solid rgb(35, 197, 29);
+          margin: 5px auto;
+          font-size: 25px;
+          border-radius: 6px;
+      }
+  
+      /* For "Join the best gym of Ahmedabad" */
+      .container h1 {
+          text-align: center;
+          border: 2px solid rgb(0, 140, 255);
+          border-radius: 10px;
+          color: rgb(177, 226, 43);
+      }
+   
+  
+      /* for submit button  */
+      .container button {
+          display: block;
+          width: 101%;
+          margin: 24px auto;
+      }
+      .container button:hover{
+          font-size: 20px;
+      }
+  
+      /* left side image containers */
+      .gymimg{
+          background: repeating-linear-gradient(45deg, #042448, transparent 100px);
+          display: inline-block;
+          border: 2px solid rgb(58, 230, 58);
+          margin: 68px 35px;
+          padding: 66px;
+          width: 33%;
+          border-radius: 28px;
+      }
+      
+      /* right side image containers */
+      .gymimg2{
+          background: repeating-linear-gradient(45deg, #042448, transparent 100px);
+          float: right;
+          border: 2px solid rgb(70, 253, 9);
+          margin: 68px 42px;
+          padding: 66px;
+          width: 33%;
+          border-radius: 28px;
+      }
+      /* Headings inside image containers */
+      .gymimg h1 , .gymimg2 h1{
+           text-align: center; 
+      }
+      /* For current active page */
+      .active{
+      opacity: 0.5;
+      }
+      /*Lefthand side images inside containers */
+      #left {
+          width: 440px;
+          height: 300px;
+          border: 2px solid rgb(115, 245, 174);
+          
+      }
+      /* Right hand side images inside containers */
+      #right {
+          width: 440px;
+          height: 300px;
+          border: 2px solid rgb(115,245,174);
+      }
+  </style>
+  </head>
+  <header>
+    <nav class="navbar">
+      <ul>
+          <li><a href="GYM_website.html" class="active">HOME</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+      </ul>
+      <div class = 'left'>
+        <img src="logo.jpg" alt="" style="height: 80px; width: 80px;border-radius: 100%;" >
+      </div>
+    </nav>
+    <div class="right">
+    <button class="btn" onclick="alert('You can contact us on our toll free number : 1800-419-0333')">Call Us</button>
+    <button class="btn" onclick="alert('You can mail us on : hamaragym@gmail.com')">Email Us</button>
+    </div>
+  </header>
+  <body>
+  <div ng-app="" ng-init="sem='4'; uni='ITNU';country='India'">
+    <div class = "container" style="background: repeating-linear-gradient(45deg, #042448, transparent 100px);">
+      <h1>Register Here</h1>
+      <form action="payment.html">
+          <div class="form-group">
+            <br><br>
+            <label style="font-size:x-large;">Gym Mode  :  </label>
+            <br><br>
+                <select ng-model="mode">
+                    <option >Easy Track</option>
+                    <option >Fast Track</option>
+                    <option >Rapid Track</option>
+                </select>
+              <br><br>
+            <label style="font-size:x-large;">Gym Package  :  </label>
+            <br><br>
+              <select ng-model="type">
+                <option >Monthly</option>
+                <option >Quaterly</option>
+                <option >Annually</option>
+              </select>
+            <br><br>
+            <label style="font-size:x-large;"> Package Price : </label>
+            <br><br>
+            <select ng-model="price">
+              <option>Rs.1000</option>
+              <option>Rs.5000</option>
+              <option>Rs.10000</option>
+            </select>
+            <br><br>
+            <label style="font-size:x-large;"> Body Weight : </label>
+            <br><br>
+            <input type="number" name = "weight" ng-model="weight" id = "weight" placeholder="Enter your Body weight" required>
+            <br><br>
+            <label style="font-size:x-large;"> Height : </label>
+            <br><br>
+            <input type="number" name = "height" ng-model="height" id = "height" placeholder="Enter your Height" required>
+            <br><br>
+            <button class="btn" type="submit" >Pay Now</button>
+            <button class="btn" type="reset" >Reset</button>
+          <div>
+            Information entered :-
+          </div>
+          <div>
+            Gym Mode :- {{mode}}
+          </div>
+          <div>
+            Package type :- {{type}}
+          </div>
+          <div>
+            Your Weight is:- {{weight}}
+          </div>
+          <div>
+            Your Height is :- {{height}}
+          </div>
+          <div>
+            Package taken :- {{price}}
+          </div>
+      </form>  
+    </div>
+  </div>
+  </body>
+</html>

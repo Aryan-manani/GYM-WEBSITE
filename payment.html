@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            color:white;
+            margin: 0px;
+            padding: 0px;
+            background: url('weightlifting-3901441_1280.webp');
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+    
+        /* for navigation bar */
+        .navbar{
+            width: 40%;
+            background-color: rgb(76, 114, 116);
+            border-radius: 106px;
+            margin: 5px auto;
+        }
+        .navbar li{
+            float: left;
+            padding : 3px 5px;
+            margin : 7px 30px;
+        }
+        .navbar li a{
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: rgb(214, 248, 19);
+            font-size: 18px;
+        }
+        .navbar ul{
+            overflow: auto;
+            list-style: none;
+        }
+        .left{
+            display: inline-block;
+            position: absolute;
+            left:60px;
+            top:20px;
+        }
+        .right{
+            display: inline-block;
+            position: absolute;
+            top:20px;
+            right:60px;
+        }
+        .left{
+            display: inline-block;
+            position: absolute;
+            top:20px;
+            left:60px;
+        }
+        .left img{
+            display: inline-block;
+            width: 10%;
+        }
+        h1{
+            font-size: 40px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        
+        /* for "call us " and "Email us"and "Submit" button */
+        .btn {
+            font-family: 'Baloo Bhai 2', cursive;
+            margin: 0px 9px;
+            background-color: rgb(74, 114, 116);
+            color: white;
+            padding: 4px 14px;
+            border: 2px solid cadetblue;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        /* for "call us " and "Email us" and "Submit" button */
+        .btn:hover {
+            background-color: rgb(223, 66, 81);
+            font-size: 20px;
+        }
+    
+        /* for form container */
+        .container {
+            border: 4px solid rgb(238, 96, 226);
+            margin: 106px auto;
+            padding: 75px;
+            width: 30%;
+        }
+    
+        /* For each form attributes */
+        .form-group input {
+            font-family: 'Baloo Bhai 2', cursive;
+            text-align: center;
+            display: block;
+            width: 425px;
+            border: 1.5px solid rgb(35, 197, 29);
+            margin: 5px auto;
+            font-size: 25px;
+            border-radius: 6px;
+        }
+    
+        /* For "Join the best gym of Ahmedabad" */
+        .container h1 {
+            text-align: center;
+            border: 2px solid rgb(0, 140, 255);
+            border-radius: 10px;
+            color: rgb(177, 226, 43);
+        }
+     
+    
+        /* for submit button  */
+        .container button {
+            display: block;
+            width: 101%;
+            margin: 24px auto;
+        }
+        .container button:hover{
+            font-size: 20px;
+        }
+    
+        /* left side image containers */
+        .gymimg{
+            background: repeating-linear-gradient(45deg, #042448, transparent 100px);
+            display: inline-block;
+            border: 2px solid rgb(58, 230, 58);
+            margin: 68px 35px;
+            padding: 66px;
+            width: 33%;
+            border-radius: 28px;
+        }
+        
+        /* right side image containers */
+        .gymimg2{
+            background: repeating-linear-gradient(45deg, #042448, transparent 100px);
+            float: right;
+            border: 2px solid rgb(70, 253, 9);
+            margin: 68px 42px;
+            padding: 66px;
+            width: 33%;
+            border-radius: 28px;
+        }
+        /* Headings inside image containers */
+        .gymimg h1 , .gymimg2 h1{
+             text-align: center; 
+        }
+        /* For current active page */
+        .active{
+        opacity: 0.5;
+        }
+        /*Lefthand side images inside containers */
+        #left {
+            width: 440px;
+            height: 300px;
+            border: 2px solid rgb(115, 245, 174);
+            
+        }
+        /* Right hand side images inside containers */
+        #right {
+            width: 440px;
+            height: 300px;
+            border: 2px solid rgb(115,245,174);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function loadSub() {  
+            var xhttp = new XMLHttpRequest();  
+            xhttp.onreadystatechange = function() {    
+                if (this.readyState == 4 && this.status == 200) {     
+                    document.getElementById("payment").innerHTML = this.responseText;    
+                }  
+            };  
+            xhttp.open("GET", "Submit.html", true);  
+            xhttp.send();
+        }
+        function card_validate(){
+            cardno = document.getElementById('card').value;
+            if(cardno=="")
+            {
+                alert('Please enter Card No.');
+                return false;
+            }
+            if(cardno<1000000000000000 || cardno> 9999999999999999)
+            {
+                alert('16 digits number required');
+                document.getElementById('card').value = '';
+                return false;
+            }
+            return true;
+        }
+        function name_validate(){
+            fname = document.getElementById('name').value;
+            if(fname=="")
+            {
+                alert('Please enter Name on Card ');
+                return false;
+            }
+            for(i=0;i<fname.length;i++){
+                if((fname[i]>='a' && fname[i]<='z') ||(fname[i]>='A' && fname[i]<='Z') || (fname[i]==" ")){}
+                else
+                {
+                    alert('Invalid Card Holder Name');
+                    document.getElementById('name').value = '';
+                    return false;
+                }
+            }
+        return true;
+        } 
+        function cvv_validate(){
+            cvv = document.getElementById('cvv').value;
+            if(cvv=="")
+            {
+                alert('Please enter CVV ');
+                return false;
+            }
+            if(cvv.length==3)
+            {
+                for(i=0;i<cvv.length;i++)
+                {
+                    if(cvv[i]>=0 && cvv[i]<=9){}
+                    else
+                    {
+                        alert('Onlu digits are allowed in CVV');
+                        document.getElementById('cvv').value = '';
+                        return false;
+                    }
+                }
+            }
+            else
+            {
+                alert('Enter a 3 digit CVV');
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="GYM_website.html" class="active">HOME</a></li>
+                <li><a href="aboutus.html" >ABOUT US</a></li>
+                <li><a href="services.html" >SERVICES</a></li>
+                <li><a href="gallery.html" >GALLERY</a></li>
+            </ul>
+        </nav>
+        <div class = 'left'>
+        <img src="logo.jpg" alt="" style="height: 78px; width: 78px;border-radius: 100%;" >
+        </div>
+        <div class="right">
+            <button class="btn" onclick="alert('You can contact us on our toll free number : 1800-419-0333')">Call Us</button>
+            <button class="btn" onclick="alert('You can mail us on : hamaragym@gmail.com')">Email Us</button>
+        </div>
+
+    </header>
+    <div class="container" id="payment" style="background: repeating-linear-gradient(45deg, #042448, transparent 100px);">
+        <h1>Payment</h1>
+        <form>
+            <div class="form-group">
+                <input type="number" id="card" placeholder="Enter Cardnumber" onchange="card_validate()" required/>
+                <input type="text" id="name" placeholder="Enter name on Card" onchange="name_validate()" required/>
+                <br>
+                <label style="font-size:x-large;">Month  :  </label>
+                <select name="Enter expiry month" id="">
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="Jun">Jun</option>
+                    <option value="Jul">Jul</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sep">Sep</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                </select>
+                <br><br>
+                <label style="font-size:x-large;">Year  :  </label>
+                <select name="Enter expiry month" id="">
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                </select>
+                <br><br>
+                <input type="password" id="cvv" placeholder="Enter CVV" onchange="cvv_validate()" required/>
+                <br>
+            </div>
+              
+        </form>
+        <button class="btn" type="submit" onclick="card_validate() && name_validate() && cvv_validate() && loadSub()">Make Payment</button>  
+    </div>
+</body>
+</html>

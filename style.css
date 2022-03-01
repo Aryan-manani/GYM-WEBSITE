@@ -1,0 +1,98 @@
+*{
+  font-family: 'Baloo Bhai 2';
+  text-decoration: none;
+  outline: none;
+  cursor: default;
+}
+.provide_service{
+  height: 480px;
+  width: 100%;
+}
+.full_services_list{
+  margin-top: 50px;
+  margin-left: 10%;
+  width: 80%;
+  padding-right: 15px;
+  padding-left: 15px;
+  background:#17a2b8;
+}
+.full_services_list ul{
+  overflow: hidden;
+  list-style-type:none;
+  text-align: left;
+}
+.full_services_list ul li{
+  margin: 30px 30px;   /*margin inbetween nav elements*/
+  font-family: 'Baloo Bhai 2';
+  font-weight: 600;
+  font-size: large;
+  color: aliceblue;
+}
+.full_services_list ul .main_bt{
+  width: 195px;
+  height: 55px;
+  float: left;
+  text-align: center;
+  line-height: 55px;
+  border: solid #00cc99 3px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-left: 95px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: #fff;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  outline: none;
+  transition: all .5s;
+  cursor: pointer
+}
+.full_services_list ul .main_bt :hover{
+  color: #17a2b8;
+}
+.check_icon{
+  margin: 0px 50px;
+  height: 50px;
+  border-radius: 100%;  /*circle like shape*/
+}
+.full_services_list .gym_icon{
+  float: right;
+  height: 350px;
+  margin-top: 15px;
+}
+.heading_main h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-left: 150px;
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  outline: none;
+}
+.heading_main .theme_color{
+  color: #00cc99;
+  text-decoration: underline;
+}
+.gallery{
+  height: 500px;
+}
+.gallery .gallery_img{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 30px;
+  height: 300px;
+  background-color: #17a2b8;
+}
+.white_bg {
+  background: #fff;
+  width: 83%;
+  margin: 0 3%;
+  box-shadow: 0 0 25px 0 rgb(0 0 0 / 10%);
+}
+.white_bg p{
+  text-decoration: none;
+  color: black;
+}

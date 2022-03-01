@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About US</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <style>
+      body{
+        color:white;
+        margin: 0px;
+        padding: 0px;
+        background: url('weightlifting-3901441_1280.webp');
+        font-family: 'Baloo Bhai 2', cursive;
+    }
+    /* For current active page */
+    .active{
+    opacity: 0.5;
+    }
+    .aboutus_img{
+      padding: 10px;
+      margin-left: -100px;
+      border-radius: 20px;
+      height: 300px;
+      background-color: #17a2b8;
+
+    }
+    .navbar{
+        width:40%;
+        background-color: rgb(76, 114, 116);
+        border-radius: 106px;
+        margin: 5px auto;
+    }
+    .left{
+        display: inline-block;
+        position: absolute;
+        left:60px;
+        top:20px;
+    }
+    .navbar li{
+        float: left;
+        padding : 3px 5px;
+        margin : 7px 30px;
+    }
+    .navbar li a{
+        text-decoration: none;
+        color: white;
+    }
+    .navbar li a:hover{
+        color: rgb(214, 248, 19);
+        font-size: 18px;
+    }
+    .navbar ul{
+        overflow: auto;
+        list-style: none;
+    }
+    .right{
+        display: inline-block;
+        position: absolute;
+        top:20px;
+        right:60px;
+    }
+    .main_bt{
+        width: 195px;
+        height: 55px;
+        float: left;
+        text-align: center;
+        line-height: 55px;
+        border: solid #00cc99 3px;
+        border-radius: 10px;
+        font-size: 18px;
+        margin-left: 95px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        background: #fff;
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+        outline: none;
+        transition: all .5s;
+        cursor: pointer
+      }
+    /* for "call us " and "Email us"and "Submit" button */
+    .btn {
+        font-family: 'Baloo Bhai 2', cursive;
+        margin: 0px 9px;
+        background-color: rgb(74, 114, 116);
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid cadetblue;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .main_bt :hover{
+      color: #17a2b8;
+    }
+    /* for "call us " and "Email us" and "Submit" button */
+    .btn:hover {
+        background-color: rgb(223, 66, 81);
+        font-size: 20px;
+    }
+    </style>
+</head>
+<body>
+
+ <header>
+  <nav class="navbar">
+    <ul>
+        <li><a href="GYM_website.html">HOME</a></li>
+        <li><a href="aboutus.html" class="active">ABOUT US</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="gallery.html" >GALLERY</a></li>
+    </ul>
+    <div class = 'left'>
+      <img src="logo.jpg" alt="" style="height: 78px; width: 78px;border-radius: 100%;" >
+    </div>
+  </nav>
+<div class="right">
+  <button class="btn" onclick="alert('You can contact us on our toll free number : 1800-419-0333')">Call Us</button>
+  <button class="btn" onclick="alert('You can mail us on : hamaragym@gmail.com')">Email Us</button>
+</div>
+ </header>
+
+ <div class="heading_main">
+  <h2><span class="theme_color">About Us</span></h2>
+</div>
+<center>
+  <div class="white_bg">
+    <p style = "padding-left: 20px;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like.
+    </p>
+    <a class="main_bt" href="https://www.searchenginejournal.com/about-us-page-examples/250967/">Read More</a><br><br><br>
+    <img src="about_us.jpg" alt="about us information" class = "aboutus_img"> 
+  </div>
+</center>
+</body>
+</html>
